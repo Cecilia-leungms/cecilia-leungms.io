@@ -193,7 +193,7 @@ figure {
 }
 
 img {
-	vertical-align: middle;
+	/*vertical-align: middle;*/
 	border-style: none;
 }
 
@@ -604,8 +604,8 @@ pre code {
 .col-xl-auto {
 	position: relative;
 	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
+	padding-right: 25px;
+	padding-left: 25px;
 }
 
 .col {

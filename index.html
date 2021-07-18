@@ -3,73 +3,26 @@
 <head>
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="author" content="SemiColonWeb" />
+	<meta name="author" content="ACM BYUI student Chapter" />
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700&display=swap" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
-
-	<!-- One Page Module Specific Stylesheet -->
-	<link rel="stylesheet" href="one-page/onepage.css" type="text/css" />
-	<!-- / -->
-
 	<link rel="stylesheet" href="css/dark.css" type="text/css" />
 	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
-	<link rel="stylesheet" href="one-page/css/et-line.css" type="text/css" />
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
-
-	<link rel="stylesheet" href="one-page/css/fonts.css" type="text/css" />
 
 	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-
 	<!-- Document Title
 	============================================= -->
-	<title>Portrait - One Page Canvas Slider | Canvas</title>
-
-	<style>
-		.font-secondary { font-family: 'Playfair Display', serif !important; }
-
-		.slider-arrow-left,
-		.slider-arrow-right{
-		    background: transparent;
-			position: relative;
-			top: auto;
-			left: auto;
-			right: auto;
-			width: auto;
-			height: auto;
-			margin: 0;
-		}
-
-		.slider-arrow-left i, .slider-arrow-right i {
-			text-shadow: none;
-			font-size: 24px;
-			color: #555;
-		}
-
-		.slider-arrow-left:hover, .slider-arrow-right:hover { background-color: transparent !important; }
-		.swiper-button-disabled { opacity: .3; }
-
-		.slider-arrow-left:not(.swiper-button-disabled):hover i, .slider-arrow-right:not(.swiper-button-disabled):hover i { color: #111; }
-
-		.slide-number {
-		    position: relative;
-		    opacity: 1;
-		    right: 0px;
-		    bottom: 0px;
-		    z-index: 20;
-		    color: #333;
-		    text-shadow: none;
-		    font-size: 18px;
-		    font-weight: 300;
-		}
-	</style>
+	<title>Art Tale</title>
+	<link rel="shortcut icon" type="image/jpg" href="./images/favicon.png"/>
 
 </head>
 
@@ -79,9 +32,58 @@
 	============================================= -->
 	<div id="wrapper" class="clearfix">
 
+		<div id="home" class="page-section" style="position:absolute;top:0;left:0;width:100%;height:200px;z-index:-2;"></div>
+
+		<section id="slider" class="slider-element slider-parallax min-vh-60 min-vh-md-100 with-header swiper_wrapper">
+			<div class="slider-inner">
+
+				<div class="swiper-container swiper-parent">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide dark">
+							<div class="container">
+								<div class="slider-caption slider-caption-center">
+									<h1 data-animate="fadeInUp">Stories by Your Hands</h1>
+									<!--<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Art Tale</p>-->
+								</div>
+							</div>
+							<div class="swiper-slide-bg" style="background-image: url('images/slider/swiper/1.jpg');"></div>
+						</div>
+						<!--<div class="swiper-slide dark">
+							<div class="container">
+								<div class="slider-caption slider-caption-center">
+									<h2 data-animate="fadeInUp">Exciting Project Opportunities</h2>
+									<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Come Participate &amp; Make an Impact in the World and Put Yourself Out There.</p>
+								</div>
+							</div>
+							<div class="video-wrap">
+								<video poster="images/videos/explore-poster.jpg" preload="auto" loop autoplay muted>
+									<source src='images/videos/explore.mp4' type='video/mp4' />
+									<source src='images/videos/explore.webm' type='video/webm' />
+								</video>
+								<div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+							</div>
+						</div>-->
+						<div class="swiper-slide">
+							<div class="container">
+								<div class="slider-caption slider-caption-center">
+									<h1 data-animate="fadeInUp animated" style="color: white;">Great Connections</h1>
+									<p class="d-none d-sm-block fadeInUp animated" data-animate="fadeInUp" data-delay="200" style="color: white;">Connecting with Yourself and Others Better</p>
+								</div>
+							</div>
+							<div class="swiper-slide-bg" style="background-image: url('images/portfolio/projects/ACM_OG.jpg'); background-position: center top;"></div>
+						</div>
+					</div>
+					<div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
+					<div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
+					<div class="slide-number"><div class="slide-number-current"></div><span>/</span><div class="slide-number-total"></div></div>
+				</div>
+
+			</div>
+		</section>
+
 		<!-- Header
 		============================================= -->
-		<header id="header" class="full-header header-size-custom" data-sticky-shrink="false">
+		<header id="header" class="full-header">
 			<div id="header-wrap">
 				<div class="container">
 					<div class="header-row">
@@ -89,9 +91,19 @@
 						<!-- Logo
 						============================================= -->
 						<div id="logo">
-							<a href="index.html" class="standard-logo" data-dark-logo="one-page/images/canvasone-dark.png"><img src="one-page/images/canvasone.png" alt="Canvas Logo"></a>
-							<a href="index.html" class="retina-logo" data-dark-logo="one-page/images/canvasone-dark@2x.png"><img src="one-page/images/canvasone@2x.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo-simple.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo-simple@2x.png" alt="Canvas Logo"></a>
 						</div><!-- #logo end -->
+
+						<div class="header-misc">
+
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon">
+								<a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
+							</div><!-- #top-search end -->
+
+						</div>
 
 						<div id="primary-menu-trigger">
 							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
@@ -101,28 +113,22 @@
 						============================================= -->
 						<nav class="primary-menu">
 
-							<ul class="one-page-menu menu-container" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
-								<li class="menu-item">
-									<a href="#" class="menu-link" data-href="#wrapper"><div>Home</div></a>
-								</li>
-								<li class="menu-item">
-									<a href="#" class="menu-link" data-href="#section-about"><div>About</div></a>
-								</li>
-								<li class="menu-item">
-									<a href="#" class="menu-link" data-href="#section-works"><div>Works</div></a>
-								</li>
-								<li class="menu-item">
-									<a href="#" class="menu-link" data-href="#section-services"><div>Services</div></a>
-								</li>
-								<li class="menu-item">
-									<a href="#" class="menu-link" data-href="#section-blog"><div>Blog</div></a>
-								</li>
-								<li class="menu-item">
-									<a href="#" class="menu-link" data-href="#section-contact"><div>Contact</div></a>
-								</li>
+							<ul class="menu-container one-page-menu" data-easing="easeInOutExpo" data-speed="1500">
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#home"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-about"><div>About Us</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-current-projects"><div>Classes</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-rbdc"><div>Events</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-team" data-offset="60"><div>Team</div></a></li>
+								<!--<li class="menu-item"><a class="menu-link" href="#" data-href="#section-testimonials" data-offset="60"><div>Testimonials</div></a></li>-->
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-contact"><div>Contact</div></a></li>
+								<!--<li class="menu-item"><a class="menu-link" href="https://www.acm.org/"><div>ACM</div></a></li>-->
 							</ul>
 
 						</nav><!-- #primary-menu end -->
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
 
 					</div>
 				</div>
@@ -130,711 +136,790 @@
 			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
-		<section id="slider" class="slider-element swiper_wrapper min-vh-0">
-			<div class="slider-inner">
-
-				<div class="swiper-container swiper-parent">
-					<div class="swiper-wrapper h-auto">
-
-						<!-- Slide 1 -->
-						<div class="swiper-slide bg-white">
-							<div class="row justify-content-center align-items-stretch h-100">
-								<div class="col-md-6 order-md-last min-vh-50" data-animate="fadeInRight">
-									<div class="video-wrap">
-										<video id="slide-video" poster="one-page/images/page/portrait/video-poster.jpg" preload="auto" loop autoplay muted>
-											<source src='one-page/images/page/portrait/video.mp4' type='video/mp4' />
-										</video>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="row flex-row h-100">
-										<div class="col-12 d-flex align-items-center px-3 px-xl-5">
-											<div class="slider-desc p-5">
-												<h5 class="text-uppercase ls3 font-weight-normal text-black-50" data-animate="fadeIn" data-delay="100">Model 2021</h5>
-												<h2 class="display-3 font-weight-bold font-secondary" data-animate="fadeIn" data-delay="200">Montana Yao</h2>
-												<p class="lead mb-0 d-block d-md-none d-lg-block font-secondary" data-animate="fadeIn" data-delay="300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda praesentium eius, similique reprehenderit ab voluptatibus eaque. Nobis maxime recusandae aliquid, id impedit aperiam dolore quas, illo eum quam.</p>
-											</div>
-										</div>
-
-										<div class="col-12 d-flex align-items-end">
-											<div class="row">
-												<div class="col-6 h-100" data-animate="fadeInLeft" data-delay="400" style="background: url('one-page/images/page/portrait/slide1-sm.jpg') center center /cover; min-height: 250px">
-												</div>
-												<div class="col-6 px-4 d-flex align-items-start flex-column" data-animate="fadeIn" data-delay="600">
-													<p class="mb-auto">Dynamically incentivize 2.0 materials via integrated products. Efficiently facilitate cross functional convergence before client-based e-business. Authoritatively provide access to compelling leadership.</p>
-													<div class="slider-nav d-flex justify-content-between w-100 my-3">
-														<div class="slider-arrows d-flex align-items-center">
-															<div class="slider-arrow-left"><i class="icon-line-arrow-left"></i></div>
-															<div class="slider-arrow-right"><i class="icon-line-arrow-right"></i></div>
-														</div>
-														<div class="slide-number">
-															<div class="slide-number-current"></div>
-															<span>/</span>
-															<div class="slide-number-total"></div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Slide 2 -->
-						<div class="swiper-slide bg-light">
-							<div class="row justify-content-center align-items-stretch h-100">
-								<div class="col-md-6 order-md-last min-vh-50" data-animate="fadeInRight" style="background: url('one-page/images/page/portrait/slide1.jpg') top center /cover; min-height: 360px">
-								</div>
-								<div class="col-md-6">
-									<div class="row flex-row h-100">
-										<div class="col-12 d-flex align-items-center px-3 px-xl-5">
-											<div class="slider-desc p-5">
-												<h5 class="text-uppercase ls3 font-weight-normal text-black-50"  data-animate="fadeIn" data-delay="100">Model 2021</h5>
-												<h2 class="display-3 font-weight-bold font-secondary" data-animate="fadeIn" data-delay="200">Pelician Steve</h2>
-												<p class="lead mb-0 d-block d-md-none d-lg-block font-secondary" data-animate="fadeIn" data-delay="300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda praesentium eius, similique reprehenderit ab voluptatibus eaque. Nobis maxime recusandae aliquid, id impedit aperiam dolore quas, illo eum quam.</p>
-											</div>
-										</div>
-
-										<div class="col-12 d-flex align-items-end">
-											<div class="row">
-												<div class="col-6 h-100" data-animate="fadeInLeft" data-delay="400" style="background: url('one-page/images/page/portrait/slide1-sm.jpg') top center /cover; min-height: 250px">
-												</div>
-												<div class="col-6 px-4 d-flex align-items-start flex-column" data-animate="fadeIn" data-delay="600">
-													<p class="mb-auto">Dynamically incentivize 2.0 materials via integrated products. Efficiently facilitate cross functional convergence before client-based e-business. Authoritatively provide access to compelling leadership.</p>
-													<div class="slider-nav d-flex justify-content-between w-100 mb-3">
-														<div class="slider-arrows d-flex align-items-center">
-															<div class="slider-arrow-left"><i class="icon-line-arrow-left"></i></div>
-															<div class="slider-arrow-right"><i class="icon-line-arrow-right"></i></div>
-														</div>
-														<div class="slide-number">
-															<div class="slide-number-current"></div><span>/</span><div class="slide-number-total"></div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</section>
-
 		<!-- Content
 		============================================= -->
 		<section id="content">
-			<div class="content-wrap py-0">
+			<div class="content-wrap">
 
-				<div id="section-about" class="center page-section">
+				<section id="section-about" class="page-section">
 
 					<div class="container clearfix">
 
-						<h2 class="mx-auto bottommargin font-body" style="max-width: 700px; font-size: 40px;">A digital web studio creating stunning &amp; engaging online experiences</h2>
+						<div class="heading-block center">
+							<h2>We are <span>Art Tale</span></h2>
+							<span>A NGO for people to find their voice through art.</span>
+						</div>
 
-						<p class="lead mx-auto bottommargin" style="max-width: 800px;">Ford Foundation reduce child mortality fight against oppression refugee disruption pursue these aspirations effect. Free-speech Nelson Mandela change liberal; challenges of our times sustainability institutions.</p>
+						<div class="row justify-content-center col-mb-50">
+							<div class="col-sm-4 col-lg-3">
+								<div class="feature-box media-box">
+									<div class="fbox-media">
+										<img src="images/services/1.jpg" alt="Why choose Us?">
+									</div>
+									<div class="fbox-content px-0">
+										<h3>Why choose us #1<span class="subtitle">Build Up Your Confidence</span></h3>
+										<p>Not everyone is born with an inbuilt sense of self-confidence. Sometimes it can be hard to develop confidence. But, Participating in a form of art can help you at every stage of life and art is a great way for you to discover your value.</p>
+									</div>
+								</div>
+							</div>
 
-						<p class="bottommargin" style="font-size: 16px;"><a href="#" data-scrollto="#section-services" data-easing="easeInOutExpo" data-speed="1250" data-offset="70" class="more-link">Learn more <i class="icon-angle-right"></i></a></p>
+							<div class="col-sm-4 col-lg-3">
+								<div class="feature-box media-box">
+									<div class="fbox-media">
+										<img src="images/services/2.jpg" alt="Why choose Us?">
+									</div>
+									<div class="fbox-content px-0">
+										<h3>Why choose us #2<span class="subtitle">Make Connection with Others</span></h3>
+										<p>There’s a message here that resonates with anyone who creates something to share with others, be it visual art, performance, writing, or music. Giving away free content was about the value of the music becoming the connection itself.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-4 col-lg-3">
+								<div class="feature-box media-box">
+									<div class="fbox-media">
+										<img src="images/services/3.jpg" alt="Why choose Us?">
+									</div>
+									<div class="fbox-content px-0">
+										<h3>Why choose Us #3<span class="subtitle">Be Yourself</span></h3>
+										<p>Unleashing your artistic side can open the mind to new and compelling ideas and engender discovery of passions and intellect. Thus, finding ways to be more creative, through art and science, will enrich the soul and provide inspiration for future ventures.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-4 col-lg-3">
+								<div class="feature-box media-box">
+									<div class="fbox-media">
+										<img src="images/services/4.jpg" alt="Why choose Us?">
+									</div>
+									<div class="fbox-content px-0">
+										<h3>Why choose Us #4<span class="subtitle">Skills</span></h3>
+										<p>An education that includes the arts is essential to a human’s success in developing a fulfilling life. Skills developed through participation in the arts are increasingly important in the workplace and therefore, key to a successful career. </p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="section dark parallax mb-0" style="padding: 80px 0;background-image: url('images/parallax/1.jpg');" data-bottom-top="background-position:0px 100px;" data-top-bottom="background-position:0px -300px;">
+						<div class="container clearfix">
+
+							<div class="row col-mb-50">
+								<div class="col-sm-6 col-lg-3 text-center" data-animate="bounceIn">
+									<i class="i-plain i-xlarge mx-auto mb-0 icon-school"></i>
+									<div class="counter counter-lined"><span data-from="2" data-to="13" data-refresh-interval="2" data-speed="500"></span></div>
+									<h5>Classes</h5>
+								</div>
+
+								<div class="col-sm-6 col-lg-3 text-center" data-animate="bounceIn" data-delay="200">
+									<i class="i-plain i-xlarge mx-auto mb-0 icon-users"></i>
+									<div class="counter counter-lined"><span data-from="16" data-to="364" data-refresh-interval="2" data-speed="500"></span></div>
+									<h5>Current Members</h5>
+								</div>
+
+								<div class="col-sm-6 col-lg-3 text-center" data-animate="bounceIn" data-delay="400">
+									<i class="i-plain i-xlarge mx-auto mb-0 icon-award"></i>
+									<div class="counter counter-lined"><span data-from="1" data-to="3" data-refresh-interval="5" data-speed="2700"></span></div>
+									<h5>Rewards</h5>
+								</div>
+
+								<div class="col-sm-6 col-lg-3 text-center" data-animate="bounceIn" data-delay="600">
+									<i class="i-plain i-xlarge mx-auto mb-0 icon-line-calendar"></i>
+									<div class="counter counter-lined"><span data-from="0" data-to="13" data-refresh-interval="3" data-speed="800"></span></div>
+									<h5>Scheduled Events</h5>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</section>
+
+				<section id="section-current-projects" class="page-section topmargin-lg">
+
+					<div class="heading-block center">
+						<h2>Our Classes</h2>
+						<span>Three of the basic classes we created for you specifically.</span>
+					</div>
+
+					<div class="container">
+						<div class="row justify-content-center col-mb-50">
+							<div class="col-sm-6 col-lg-4">
+								<div class="feature-box fbox-effect border-bottom-0" data-animate="fadeIn">
+									<div class="fbox-media">
+										<img src="images/services/10.jpg" alt="Value & Contribution">
+									</div>
+									<div class="fbox-content px-0">
+										<h3>Value & Contribution Class<span class="subtitle">Find Who You Are</span></h3>
+										<p>Students will find their voice and self-confidence as they learn to create and as they learn of their role and abilities as change agents and are shown the impact they can have</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-lg-4">
+								<div class="feature-box fbox-effect border-bottom-0" data-animate="fadeIn" data-delay="400">
+									<div class="fbox-media">
+										<img src="images/services/20.jpg" alt="Create & Power">
+									</div>
+									<div class="fbox-content px-0">
+										<h3>Create & Power Class<span class="subtitle">Build Up Your Skills</span></h3>
+										<p>Students will be taught and experience the arts in various forms as methods of expression and taught about the influence the arts and storytelling can have.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-lg-4">
+								<div class="feature-box fbox-effect border-bottom-0" data-animate="fadeIn" data-delay="600">
+									<div class="fbox-media">
+										<img src="images/services/30.jpg" alt="People Theory">
+									</div>
+									<div class="fbox-content px-0">
+										<h3>People Theory's Class<span class="subtitle">Make Connection With Others</span></h3>
+										<p>Students such as Arbinger’s see people as people theory are taught within the classes and activities teaching the students how to see others.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						
+							<!-- <article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12 pf-illustrations">
+								<div class="grid-inner">
+									<div class="portfolio-image">
+										<a href="portfolio-single.html">
+											<img src="images/portfolio/projects/Artemis.png" alt="Locked Steel Gate">
+										</a>
+										<div class="bg-overlay">
+											<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
+												<a href="images/portfolio/full/2.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="image" title="Image"><i class="icon-line-plus"></i></a>
+												<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
+											</div>
+											<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+										</div>
+									</div>
+									<div class="portfolio-desc">
+										<h3><a href="portfolio-single.html">Artemis</a></h3>
+										<span><a href="#">C#</a></span>
+									</div>
+								</div>
+							</article> -->
+
+							<!-- <article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12 pf-illustrations">
+								<div class="grid-inner">
+									<div class="portfolio-image">
+										<a href="portfolio-single.html">
+											<img src="images/portfolio/projects/YellowHeart.png" alt="Locked Steel Gate">
+										</a>
+										<div class="bg-overlay">
+											<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
+												<a href="images/portfolio/full/2.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="image" title="Image"><i class="icon-line-plus"></i></a>
+												<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
+											</div>
+											<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+										</div>
+									</div>
+									<div class="portfolio-desc">
+										<h3><a href="portfolio-single.html">YellowHeart Crypto</a></h3>
+										<span><a href="#">Python</a>, <a href="#">Solidity</a>, <a href="#">JavaScript</a></span>
+									</div>
+								</div>
+							</article> -->
+
+
+							<!--<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12 pf-graphics pf-uielements">
+								<div class="grid-inner">
+									<div class="portfolio-image">
+										<a href="#">
+											<img src="images/portfolio/projects/TapTap.png" alt="Mac Sunglasses">
+										</a>
+										<div class="bg-overlay">
+											<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
+												<a href="https://www.youtube.com/watch?v=hTHaUcZ_VP8" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="iframe"><i class="icon-line-play"></i></a>
+												<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
+											</div>
+											<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+										</div>
+									</div>
+									<div class="portfolio-desc">
+										<h3><a href="portfolio-single-video.html">TapTap</a></h3>
+										<span><a href="#">Swift</a>, <a href="#">SwiftUI</a></span>
+									</div>
+								</div>
+							</article> -->
+
+							<!-- <article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12 pf-icons pf-illustrations">
+								<div class="grid-inner">
+									<div class="portfolio-image">
+										<div class="fslider" data-arrows="false" data-speed="400" data-pause="4000">
+											<div class="flexslider">
+												<div class="slider-wrap">
+													<div class="slide"><a href="portfolio-single-gallery.html"><img src="images/portfolio/4/4.jpg" alt="Morning Dew"></a></div>
+													<div class="slide"><a href="portfolio-single-gallery.html"><img src="images/portfolio/4/4-1.jpg" alt="Morning Dew"></a></div>
+												</div>
+											</div>
+										</div>
+										<div class="bg-overlay" data-lightbox="gallery">
+											<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
+												<a href="images/portfolio/full/4.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
+												<a href="images/portfolio/full/4-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
+												<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
+											</div>
+											<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+										</div>
+									</div>
+									<div class="portfolio-desc">
+										<h3><a href="portfolio-single-gallery.html">Morning Dew</a></h3>
+										<span><a href="#">Icons</a>, <a href="#">Illustrations</a></span>
+									</div>
+								</div>
+							</article> -->
+
+						
+			
+					
+					</div> 
+				</section>
+
+				<section id="section-project-status" class="page-section topmargin-lg">
 
 						<div class="clear"></div>
 
-						<div class="row topmargin-lg mx-auto" style="max-width: 1000px;">
-
-
-							
-
+						<div class="fancy-title title-border title-center topmargin-sm">
+							<h4>Classes Outcome Statistic</h4>
 						</div>
 
-					</div>
-
-				</div>
-
-				<div id="section-works" class="page-section pt-0">
-
-					<div class="section m-0">
-						<div class="container clearfix">
-							<div class="mx-auto center" style="max-width: 900px;">
-								<h2 class="mb-0 font-weight-light ls1">We create &amp; craft projects that ooze creativity in every aspect. We try to create a benchmark in everything we do. Take a moment to browse through some of our recent completed work.</h2>
+						<div class="row col-mb-50">
+							<div class="col-sm-6 col-lg-3 text-center">
+								<div class="rounded-skill" data-color="#dc2728" data-size="150" data-percent="90" data-width="2" data-animate="3000">
+									<div class="counter counter-inherit"><span data-from="1" data-to="90" data-refresh-interval="50" data-speed="3000"></span>%</div>
+								</div>
+								<h5>Self-awareness</h5>
 							</div>
-						</div>
-					</div>
 
-					<!-- Portfolio Items
-					============================================= -->
-					<div class="portfolio grid-container row no-gutters">
-
-						<article class="portfolio-item col-lg-6 col-md-4 col-sm-6 col-12 wide">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<a href="#">
-										<img src="one-page/images/portfolio/mixed/1.jpg" alt="Open Imagination">
-									</a>
-									<div class="bg-overlay">
-										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
-											<div class="portfolio-desc p-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
-												<h3><a href="#">Open Imagination</a></h3>
-												<span><a href="#">Media</a>, <a href="#">Icons</a></span>
-											</div>
-										</div>
-										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
-									</div>
+							<div class="col-sm-6 col-lg-3 text-center">
+								<div class="rounded-skill" data-color="#27dc80" data-size="150" data-percent="75" data-width="2" data-animate="3000">
+									<div class="counter counter-inherit"><span data-from="1" data-to="75" data-refresh-interval="50" data-speed="3000"></span>%</div>
 								</div>
+								<h5>Confidence</h5>
 							</div>
-						</article>
 
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<a href="#">
-										<img src="one-page/images/portfolio/mixed/2.jpg" alt="Locked Steel Gate">
-									</a>
-									<div class="bg-overlay">
-										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
-											<div class="portfolio-desc p-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
-												<h3><a href="#">Locked Steel Gate</a></h3>
-												<span><a href="#">Illustrations</a></span>
-											</div>
-										</div>
-										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
-									</div>
+							<div class="col-sm-6 col-lg-3 text-center">
+								<div class="rounded-skill" data-color="#dcdb27" data-size="150" data-percent="85" data-width="2" data-animate="3000">
+									<div class="counter counter-inherit"><span data-from="1" data-to="85" data-refresh-interval="50" data-speed="3000"></span>%</div>
 								</div>
+								<h5>Connection With People</h5>
 							</div>
-						</article>
 
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<a href="#">
-										<img src="one-page/images/portfolio/mixed/3.jpg" alt="Mac Sunglasses">
-									</a>
-									<div class="bg-overlay">
-										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
-											<div class="portfolio-desc p-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
-												<h3><a href="#">Mac Sunglasses</a></h3>
-												<span><a href="#">Graphics</a>, <a href="#">UI Elements</a></span>
-											</div>
-										</div>
-										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
-									</div>
+							<div class="col-sm-6 col-lg-3 text-center">
+								<div class="rounded-skill" data-color="#8027dc" data-size="150" data-percent="80" data-width="2" data-animate="3000">
+									<div class="counter counter-inherit"><span data-from="1" data-to="80" data-refresh-interval="50" data-speed="3000"></span>%</div>
 								</div>
-							</div>
-						</article>
-
-						<article class="portfolio-item col-lg-6 col-md-4 col-sm-6 col-12 wide">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<a href="#">
-										<img src="one-page/images/portfolio/mixed/4.jpg" alt="Open Imagination">
-									</a>
-									<div class="bg-overlay">
-										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
-											<div class="portfolio-desc p-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
-												<h3><a href="#">Open Imagination</a></h3>
-												<span><a href="#">Media</a>, <a href="#">Icons</a></span>
-											</div>
-										</div>
-										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-							</div>
-						</article>
-
-						<article class="portfolio-item col-lg-6 col-md-4 col-sm-6 col-12 wide">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<a href="#">
-										<img src="one-page/images/portfolio/mixed/5.jpg" alt="Console Activity">
-									</a>
-									<div class="bg-overlay">
-										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
-											<div class="portfolio-desc p-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
-												<h3><a href="#">Console Activity</a></h3>
-												<span><a href="#">UI Elements</a>, <a href="#">Media</a></span>
-											</div>
-										</div>
-										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-							</div>
-						</article>
-
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<a href="#">
-										<img src="one-page/images/portfolio/mixed/6.jpg" alt="Open Imagination">
-									</a>
-									<div class="bg-overlay">
-										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
-											<div class="portfolio-desc p-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
-												<h3><a href="#">Open Imagination</a></h3>
-												<span><a href="#">Media</a>, <a href="#">Icons</a></span>
-											</div>
-										</div>
-										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-							</div>
-						</article>
-
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-							<div class="grid-inner">
-								<div class="portfolio-image">
-									<a href="#">
-										<img src="one-page/images/portfolio/mixed/7.jpg" alt="Backpack Contents">
-									</a>
-									<div class="bg-overlay">
-										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
-											<div class="portfolio-desc p-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350">
-												<h3><a href="#">Backpack Contents</a></h3>
-												<span><a href="#">UI Elements</a>, <a href="#">Icons</a></span>
-											</div>
-										</div>
-										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
-									</div>
-								</div>
-							</div>
-						</article>
-
-					</div><!-- #portfolio end -->
-
-					<div class="topmargin center"><a href="#" class="button button-border button-circle font-weight-semibold">View More Projects</a></div>
-
-				</div>
-
-				<div id="section-services" class="page-section pt-0">
-
-					<div class="section m-0">
-						<div class="container clearfix">
-							<div class="mx-auto center" style="max-width: 900px;">
-								<h2 class="mb-0 font-weight-light ls1">We enjoy working on the Services &amp; Products we provide as much as you need them. This help us in delivering your Goals easily. Browse through the wide range of services we provide.</h2>
-							</div>
-						</div>
-					</div>
-
-					<div class="row align-items-stretch">
-
-						<div class="col-lg-4 d-none d-md-block" style="background: url('images/services/main-bg.jpg') center center no-repeat; background-size: cover;"></div>
-						<div class="col-lg-8">
-							<div class="row align-items-stretch grid-border clearfix">
-								<div class="col-lg-4 col-md-6 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										<div class="fbox-icon">
-											<a href="#"><i class="icon-et-mobile op-gradient-icon"></i></a>
-										</div>
-										<div class="fbox-content fbox-content-sm">
-											<h3>Responsive Framework</h3>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										<div class="fbox-icon">
-											<a href="#"><i class="icon-et-presentation op-gradient-icon"></i></a>
-										</div>
-										<div class="fbox-content fbox-content-sm">
-											<h3>Beautifully Presented</h3>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										<div class="fbox-icon">
-											<a href="#"><i class="icon-et-puzzle op-gradient-icon"></i></a>
-										</div>
-										<div class="fbox-content fbox-content-sm">
-											<h3>Extensively Extendable</h3>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										<div class="fbox-icon">
-											<a href="#"><i class="icon-et-gears op-gradient-icon"></i></a>
-										</div>
-										<div class="fbox-content fbox-content-sm">
-											<h3>Powerfully Customizable</h3>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										<div class="fbox-icon">
-											<a href="#"><i class="icon-et-genius op-gradient-icon"></i></a>
-										</div>
-										<div class="fbox-content fbox-content-sm">
-											<h3>Geniusly Transformable</h3>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6 col-padding">
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-										<div class="fbox-icon">
-											<a href="#"><i class="icon-et-hotairballoon op-gradient-icon"></i></a>
-										</div>
-										<div class="fbox-content fbox-content-sm">
-											<h3>Industrial Support</h3>
-										</div>
-									</div>
-								</div>
+								<h5>Skillfulness</h5>
 							</div>
 						</div>
 
 					</div>
 
-					<div class="section dark m-0">
-						<div class="mx-auto center" style="max-width: 900px;">
-							<h2 class="mb-0 font-weight-light ls1">Like Our Services? Get an <a href="#" data-scrollto="#template-contactform" data-offset="140" data-easing="easeInOutExpo" data-speed="1250" class="button button-border button-circle button-light button-large my-0" style="position: relative; top: -3px;">Instant Quote</a></h2>
+					<div class="section parallax" style="background-image: url('images/parallax/3.jpg'); padding: 100px 0;" data-bottom-top="background-position:0px 100px;" data-top-bottom="background-position:0px -100px;">
+						<div class="heading-block center border-bottom-0 mb-0">
+							<h1 data-animate="fadeInUp animated" style="color: white;">Threadless Artist Mathole:<br>"Art Speaks Where Words Are Unable to Expain"</h1>
 						</div>
 					</div>
 
-					<div class="section parallax m-0 dark" style="background-image: url('one-page/images/page/testimonials.jpg'); padding: 150px 0;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;">
+				</section>
 
-						<div class="container clearfix">
+				<section id="section-rbdc" class="page-section topmargin-lg">
 
-							<div class="row justify-content-end">
-								<div class="col-md-7">
-									<div class="fslider testimonial testimonial-full bg-transparent border-0 shadow-none p-0" data-arrows="false">
-										<div class="flexslider">
-											<div class="slider-wrap">
-												<div class="slide">
-													<div class="testi-content">
-														<p>Similique fugit repellendus expedita excepturi iure perferendis provident quia eaque vero numquam?</p>
-														<div class="testi-meta">
-															Steve Jobs
-															<span>Apple Inc.</span>
-														</div>
-													</div>
-												</div>
-												<div class="slide">
-													<div class="testi-content">
-														<p>Natus voluptatum enim quod necessitatibus quis expedita harum provident eos obcaecati id culpa corporis molestias.</p>
-														<div class="testi-meta">
-															Collis Ta'eed
-															<span>Envato Inc.</span>
-														</div>
-													</div>
-												</div>
-												<div class="slide">
-													<div class="testi-content">
-														<p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum!</p>
-														<div class="testi-meta">
-															John Doe
-															<span>XYZ Inc.</span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<div id="section-blog" class="page-section">
-
-					<h2 class="text-center text-uppercase font-weight-light ls3 font-body">Recently From the Blog</h2>
-
-					<div class="section mb-0">
-						<div class="container clearfix">
-
-							<div class="row posts-md mt-5 col-mb-50 mb-0">
-
-								<div class="entry col-md-6">
-									<div class="grid-inner row align-items-center">
-										<div class="col-lg-6">
-											<div class="entry-image">
-												<a href="#"><img src="one-page/images/blog/1.jpg" alt="Paris"></a>
-											</div>
-										</div>
-										<div class="col-lg-6 mt-3 mt-lg-0">
-											<span class="before-heading font-normal">Press &amp; Media</span>
-											<div class="entry-title nott">
-												<h3 class="font-weight-normal"><a href="#">Global Meetup Program is Launching!</a></h3>
-											</div>
-											<div class="entry-content">
-												<a href="#" class="more-link">Read more <i class="icon-angle-right"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="entry col-md-6">
-									<div class="grid-inner row align-items-center">
-										<div class="col-lg-6">
-											<div class="entry-image">
-												<a href="#"><img src="one-page/images/blog/2.jpg" alt="Paris"></a>
-											</div>
-										</div>
-										<div class="col-lg-6 mt-3 mt-lg-0">
-											<span class="before-heading font-normal">Inside Scoops</span>
-											<div class="entry-title nott">
-												<h3 class="font-weight-normal"><a href="#">The New YouTube Economy unfolds itself</a></h3>
-											</div>
-											<div class="entry-content">
-												<a href="#" class="more-link">Read more <i class="icon-angle-right"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="entry col-md-6">
-									<div class="grid-inner row align-items-center">
-										<div class="col-lg-6">
-											<div class="entry-image">
-												<a href="#"><img src="one-page/images/blog/3.jpg" alt="Paris"></a>
-											</div>
-										</div>
-										<div class="col-lg-6 mt-3 mt-lg-0">
-											<span class="before-heading font-normal">Video Blog</span>
-											<div class="entry-title nott">
-												<h3 class="font-weight-normal"><a href="#">Kicking Off Design Party in Style</a></h3>
-											</div>
-											<div class="entry-content">
-												<a href="#" class="more-link">Read more <i class="icon-angle-right"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="entry col-md-6">
-									<div class="grid-inner row align-items-center">
-										<div class="col-lg-6">
-											<div class="entry-image">
-												<a href="#"><img src="one-page/images/blog/4.jpg" alt="Paris"></a>
-											</div>
-										</div>
-										<div class="col-lg-6 mt-3 mt-lg-0">
-											<span class="before-heading font-normal">Inspiration</span>
-											<div class="entry-title nott">
-												<h3 class="font-weight-normal"><a href="#">Top Ten Signs You're a Designer</a></h3>
-											</div>
-											<div class="entry-content">
-												<a href="#" class="more-link">Read more <i class="icon-angle-right"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-
-					<div class="container topmargin-lg clearfix">
-
-						<div id="oc-clients" class="owl-carousel topmargin image-carousel carousel-widget" data-margin="80" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="5" data-items-xl="6">
-
-							<div class="oc-item"><a href="#"><img src="images/clients/1.png" alt="Clients"></a></div>
-							<div class="oc-item"><a href="#"><img src="images/clients/2.png" alt="Clients"></a></div>
-							<div class="oc-item"><a href="#"><img src="images/clients/3.png" alt="Clients"></a></div>
-							<div class="oc-item"><a href="#"><img src="images/clients/4.png" alt="Clients"></a></div>
-							<div class="oc-item"><a href="#"><img src="images/clients/5.png" alt="Clients"></a></div>
-							<div class="oc-item"><a href="#"><img src="images/clients/6.png" alt="Clients"></a></div>
-							<div class="oc-item"><a href="#"><img src="images/clients/7.png" alt="Clients"></a></div>
-							<div class="oc-item"><a href="#"><img src="images/clients/8.png" alt="Clients"></a></div>
-							<div class="oc-item"><a href="#"><img src="images/clients/9.png" alt="Clients"></a></div>
-							<div class="oc-item"><a href="#"><img src="images/clients/10.png" alt="Clients"></a></div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<div id="section-contact" class="page-section pt-0">
-
-					<div class="row mx-0 bottommargin-lg align-items-stretch">
-						<div class="col-lg-8 col-md-6 d-none d-md-block px-0">
-							<div class="gmap h-100" data-address="Melbourne, Australia" data-maptype="ROADMAP" data-zoom="14" data-markers='[{ address: "Melbourne, Australia", html: "Melbourne, Australia", icon:{ image: "one-page/images/icons/map-icon-red.png", iconsize: [32, 32], iconanchor: [14,44] } }]' data-styles='[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":"-100"},{"lightness":"30"}]},{"featureType":"administrative.neighborhood","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"simplified"},{"gamma":"0.00"},{"lightness":"74"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"lightness":"3"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]'></div>
-						</div>
-						<div class="col-lg-4 col-md-6" style="background-color: #F5F5F5;">
-							<div class="col-padding">
-								<h3 class="font-body font-weight-normal ls1">Our Headquarters</h3>
-
-								<div style="font-size: 16px; line-height: 1.7;">
-									<address style="line-height: 1.7;">
-										<strong>North America:</strong><br>
-										795 Folsom Ave, Suite 600<br>
-										San Francisco, CA 94107<br>
-									</address>
-
-									<div class="clear topmargin-sm"></div>
-
-									<address style="line-height: 1.7;">
-										<strong>Europe:</strong><br>
-										795 Folsom Ave, Suite 600<br>
-										San Francisco, CA 94107<br>
-									</address>
-
-									<div class="clear topmargin"></div>
-
-									<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
-									<abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>
-									<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
-								</div>
-							</div>
-						</div>
+					<div class="heading-block center bottommargin-lg">
+						<h2>Coming Up Events</h2>
+						<span>Amazing Summer Events perform by our students are waiting for you!</span>
 					</div>
 
 					<div class="container clearfix">
 
-						<div class="mx-auto topmargin" style="max-width: 850px;">
-
-							<div class="form-widget">
-
-								<div class="form-result"></div>
-
-								<form class="row mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
-
-									<div class="form-process">
-										<div class="css3-spinner">
-											<div class="css3-spinner-scale-ripple">
-												<div></div>
-												<div></div>
-												<div></div>
-											</div>
-										</div>
+						<div class="row justify-content-center col-mb-50">
+							<div class="col-sm-6 col-lg-4">
+								<div class="feature-box fbox-center fbox-effect border-bottom-0" data-animate="fadeIn">
+									<div class="fbox-icon">
+										<!--<a href="./Traffic Tracking.html">--><i class="icon-line-music"></i></a>
 									</div>
-
-									<div class="col-md-6 mb-4">
-										<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control border-form-control required" placeholder="Name" />
+									<div class="fbox-content">
+										<h3>Chill Samba Music Night</h3>
+										<span>Jul 20 18:00</span> <br>
+										<span>Des Moines, Orlean</span>
+										<p>Fun Music and Entertainment based in Des Moines, Iowa. Stuart Walker as Stu Ryan O’Brien and his band play and sing traditional and new Irish music. There’s always a wee bit of clappin’, sing along and lots of laughs too!</p>
 									</div>
-									<div class="col-md-6 mb-4">
-										<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control border-form-control" placeholder="Email Address" />
-									</div>
-
-									<div class="w-100"></div>
-
-									<div class="col-md-4 mb-4">
-										<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control border-form-control" placeholder="Phone" />
-									</div>
-
-									<div class="col-md-8 mb-4">
-										<input type="text" id="template-contactform-subject" name="subject" value="" class="required sm-form-control border-form-control" placeholder="Subject" />
-									</div>
-
-									<div class="w-100"></div>
-
-									<div class="col-12 mb-4">
-										<textarea class="required sm-form-control border-form-control" id="template-contactform-message" name="template-contactform-message" rows="7" cols="30" placeholder="Your Message"></textarea>
-									</div>
-
-									<div class="col-12 center mb-4">
-										<button class="button button-border button-circle font-weight-medium ml-0 topmargin-sm" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
-										<br>
-										<small style="display: block; font-size: 13px; margin-top: 15px;">We'll do our best to get back to you within 6-8 working hours.</small>
-									</div>
-
-									<div class="w-100"></div>
-
-									<div class="col-12 d-none">
-										<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
-									</div>
-
-									<input type="hidden" name="prefix" value="template-contactform-">
-
-								</form>
-
+								</div>
 							</div>
 
+							<div class="col-sm-6 col-lg-4">
+								<div class="feature-box fbox-center fbox-effect border-bottom-0" data-animate="fadeIn" data-delay="400">
+									<div class="fbox-icon">
+										<!--<a href="./REDI Wage.html">--><i class="icon-landmark"></i></a>
+									</div>
+									<div class="fbox-content">
+										<h3>"U" Art Gallery</h3>
+										<span>Aug 04 10:00-16:00</span> <br>
+										<span>Perrotin Gallery, Paris</span>
+										<p>The purpose of each art gallery or exhibition is unique and driven by our artists' ideas, the context of space, season and the vibes of the region. You can join a group exhibition or book a free private view in the fields of abstract painting, fine arts photography and sculpture.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-lg-4">
+								<div class="feature-box fbox-center fbox-effect border-bottom-0" data-animate="fadeIn" data-delay="600">
+									<div class="fbox-icon">
+										<!--<a href="./Chipantha Web Development.html">--><i class="icon-book"></i></a>
+									</div>
+									<div class="fbox-content">
+										<h3>Story Time</h3>
+										<span>Aug 16 15:00-17:00</span> <br>
+										<span>Modus Art Gallery, Paris</span>
+										<p>A monthly open mic storytelling show tell your story or enjoy listening to others tell their stories. Come and enjoy the show together, you may able to get unexpected experience from here!
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-lg-4">
+								<div class="feature-box fbox-center fbox-effect border-bottom-0" data-animate="fadeIn" data-delay="800">
+									<div class="fbox-icon">
+										<!--<a href="./Red Falcon Ranch Web Development.html">--><i class="icon-line-music"></i></a>
+									</div>
+									<div class="fbox-content">
+										<h3>Light Vibez Music Night</h3>
+										<span>Aug 27 18:00-22:00</span> <br>
+										<span>Promuse, Villemomble</span>
+										<p>Music by Richard Rodgers; Lyrics by Oscar Hammerstein II! The story of the enthusiastic and musical Maria, who is sent to the home of Captain Georg von Trapp to be the governess for his seven children. Spend the summer among the edelweiss with "Light Vibez Music Night"</p>
+									</div>
+								</div>
+							</div>
+
+							
 						</div>
 
 					</div>
 
+					<div class="divider divider-sm divider-center topmargin-lg"><i class="icon-paint-brush"></i></div>
+
+				</section>
+
+				<!---------------- Team Section -------------------------->
+
+				<section id="section-team" class="page-section topmargin-lg">
+				<div class="heading-block center">
+					<h2>Our Team</h2>
+					<span>Our current presidency</span>
 				</div>
+
+				<div class="container clearfix">
+
+					<div class="row col-mb-50 mb-0">
+						<div class="col-lg-6">
+							<div class="team team-list row align-items-center">
+								<div class="team-image col-sm-6">
+									<img src="images/team/1.jpg" alt="Giselle Guman">
+								</div>
+								<div class="team-desc col-sm-6">
+									<div class="team-title"><h4>Giselle Guman</h4><span>Founder</span></div>
+									<div class="team-content">I believe art can change people, because it has changed mine. That's why I created this NGO to help people to find themselves in art.</div>
+									<a href="#" class="social-icon si-rounded si-small si-facebook">
+										<i class="icon-github"></i>
+										<i class="icon-github"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-twitter">
+										<i class="icon-twitter"></i>
+										<i class="icon-twitter"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-gplus">
+										<i class="icon-gplus"></i>
+										<i class="icon-gplus"></i>
+									</a>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-6">
+
+							<div class="team team-list row align-items-center">
+								<div class="team-image col-sm-6">
+									<img src="images/team/2.jpg" alt="Rebacca Fewou">
+								</div>
+								<div class="team-desc col-sm-6">
+									<div class="team-title"><h4>Leo Wills</h4><span>Art Director</span></div>
+									<div class="team-content">Focus on the beauty and originality that you bring to the world by being yourself and forgive yourself lovingly for the areas where you think you fall short. It's how ART can do to your life.</div>
+									<a href="#" class="social-icon si-rounded si-small si-forrst">
+										<i class="icon-forrst"></i>
+										<i class="icon-forrst"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-skype">
+										<i class="icon-skype"></i>
+										<i class="icon-skype"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-flickr">
+										<i class="icon-flickr"></i>
+										<i class="icon-flickr"></i>
+									</a>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="w-100"></div>
+
+						<div class="col-lg-6">
+
+							<div class="team team-list row align-items-center">
+								<div class="team-image col-sm-6">
+									<img src="images/team/3.jpg" alt="Jacques James">
+								</div>
+								<div class="team-desc col-sm-6">
+									<div class="team-title"><h4>Jacques James</h4><span>Chief of the Instrutor</span></div>
+									<div class="team-content">You are not strongly influenced by the opinions of those around you — your heart is your most important guiding compass. Art heps you to strength what you lack of.</div>
+									<a href="#" class="social-icon si-rounded si-small si-dribbble">
+										<i class="icon-dribbble"></i>
+										<i class="icon-dribbble"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-twitter">
+										<i class="icon-twitter"></i>
+										<i class="icon-twitter"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-github">
+										<i class="icon-github"></i>
+										<i class="icon-github"></i>
+									</a>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-6">
+
+							<div class="team team-list row align-items-center">
+								<div class="team-image col-sm-6">
+									<img src="images/team/4.jpg" alt="Nicolette Allard">
+								</div>
+								<div class="team-desc col-sm-6">
+									<div class="team-title"><h4>Nicolete Allard</h4><span>Accountant</span></div>
+									<div class="team-content">There is nothing more beautiful than someone who goes out of their way to make life beautiful for others.</div>
+									<a href="#" class="social-icon si-rounded si-small si-facebook">
+										<i class="icon-facebook"></i>
+										<i class="icon-facebook"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-linkedin">
+										<i class="icon-linkedin"></i>
+										<i class="icon-linkedin"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-twitter">
+										<i class="icon-twitter"></i>
+										<i class="icon-twitter"></i>
+									</a>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="w-100"></div>
+
+						<div class="col-lg-6">
+
+							<div class="team team-list row align-items-center">
+								<div class="team-image col-sm-6">
+									<img src="images/team/5.jpg" alt="Orville Moulin">
+								</div>
+								<div class="team-desc col-sm-6">
+									<div class="team-title"><h4>Orville Moulin</h4><span>Technician</span></div>
+									<div class="team-content">Computer and Art can be the most beautiful combination in this world. They both help this world to be better.</div>
+									<a href="#" class="social-icon si-rounded si-small si-dribbble">
+										<i class="icon-dribbble"></i>
+										<i class="icon-dribbble"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-twitter">
+										<i class="icon-twitter"></i>
+										<i class="icon-twitter"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-github">
+										<i class="icon-github"></i>
+										<i class="icon-github"></i>
+									</a>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-6">
+
+							<div class="team team-list row align-items-center">
+								<div class="team-image col-sm-6">
+									<img src="images/team/6.jpg" alt="Leo Wills">
+								</div>
+								<div class="team-desc col-sm-6">
+									<div class="team-title"><h4>Noel Dubois</h4><span>Instrutor</span></div>
+									<div class="team-content">I love creating but my real passion is helping others to understand the beauty of creating and all of us can be the one who create and I want to be a part of it.</div>
+									<a href="#" class="social-icon si-rounded si-small si-facebook">
+										<i class="icon-facebook"></i>
+										<i class="icon-facebook"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-linkedin">
+										<i class="icon-linkedin"></i>
+										<i class="icon-linkedin"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-twitter">
+										<i class="icon-twitter"></i>
+										<i class="icon-twitter"></i>
+									</a>
+								</div>
+							</div>
+
+						</div>
+						<div class="w-100"></div>
+
+						<!--<div class="col-lg-6">
+
+							<div class="team team-list row align-items-center">
+								<div class="team-image col-sm-6">
+									<img src="images/team/4.jpg" alt="Samuel Baker">
+								</div>
+								<div class="team-desc col-sm-6">
+									<div class="team-title"><h4>Samuel Baker</h4><span>Web Master</span></div>
+									<div class="team-content">Logical problem solving has always appealed to me and this explains my interests in mathematics, programming and computing in general. My desire for solving challenging problems led to my choices of getting involved in machine learning.</div>
+									<a href="#" class="social-icon si-rounded si-small si-dribbble">
+										<i class="icon-dribbble"></i>
+										<i class="icon-dribbble"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-twitter">
+										<i class="icon-twitter"></i>
+										<i class="icon-twitter"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-github">
+										<i class="icon-github"></i>
+										<i class="icon-github"></i>
+									</a>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-6">
+
+							<div class="team team-list row align-items-center">
+								<div class="team-image col-sm-6">
+									<img src="images/team/Jarom.png" alt="Mary Jane">
+								</div>
+								<div class="team-desc col-sm-6">
+									<div class="team-title"><h4>Jarom Lybbert </h4><span>I-Belong Coordinator</span></div>
+									<div class="team-content">The first time I used a computer, it intrigued me to know how these interfaces work, the theory behind computers and the methodology of how they work. Now, I am delving deep machine learning.</div>
+									<a href="#" class="social-icon si-rounded si-small si-facebook">
+										<i class="icon-facebook"></i>
+										<i class="icon-facebook"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-linkedin">
+										<i class="icon-linkedin"></i>
+										<i class="icon-linkedin"></i>
+									</a>
+									<a href="#" class="social-icon si-rounded si-small si-twitter">
+										<i class="icon-twitter"></i>
+										<i class="icon-twitter"></i>
+									</a>
+								</div>
+							</div>-->
+
+						</div>
+					</div>
+				</section>
+
+
+				<section id="section-testimonials" class="page-section section parallax dark" style="background-image: url('images/about/me-parallax.jpg'); padding: 150px 0;" data-bottom-top="background-position:0px 300px;" data-top-bottom="background-position:0px -300px;">
+					<div class="container clearfix">
+
+						<div class="row col-mb-50">
+							<div class="col-md-6">&nbsp;</div>
+
+							<div class="col-md-6">
+
+								<div class="heading-block center">
+									<h4>What Our Members say?</h4>
+									<span>Our Members love us &amp; so we do!</span>
+								</div>
+
+								<div class="fslider testimonial testimonial-full bg-transparent border-0 shadow-none p-0" data-arrows="false">
+									<div class="flexslider">
+										<div class="slider-wrap">
+											<div class="slide">
+												<div class="testi-content">
+													<p>Art Tale is a BRAVO organization that help me to understand more about myself. It helps me to know the amazing thing about art and myself.</p>
+													<div class="testi-meta">
+														William Hilton
+														<span>Arras, France</span>
+													</div>
+												</div>
+											</div>
+											<div class="slide">
+												<div class="testi-content">
+													<p>Never thought art can be so helpful in my life!</p>
+													<div class="testi-meta">
+														Colette Coleman
+														<span>Paris, France</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</section>
+				<!--- Team Section End -->
+
+				<!--- Contact Section -->
+				<section id="section-contact" class="page-section">
+
+					<div class="heading-block text-center">
+						<h2>Get in Touch with us</h2>
+						<span>Our Centers are all over the world! Find the one the is most near you.</span>
+					</div>
+
+					<div class="container clearfix">
+
+						<div class="row align-items-stretch col-mb-50 mb-0">
+							<!-- Contact Form
+							============================================= -->
+							<div class="col-lg-6">
+
+								<div class="fancy-title title-border">
+									<h3>Join Us</h3>
+								</div>
+
+								<div class="form-widget">
+									<div class="form-result"></div>
+									<!--<a href="https://ibelong.byui.edu/associationforcomputingmachinery/club_signup">--><img src="images/worldmap.png" alt="world map"></a>
+								</div>
+
+							</div><!-- Contact Form End -->
+
+							<!--- ============================================= -->
+							<div class="col-lg-6 min-vh-40">
+							<h3>Location: </h3>
+							<span>France (Headquarter):<span><br>
+							<span>Address: </span><span class="subtitle"><a href="Art Tal, 4/6 Rue du pont, 62000 Paris, France">Art Tal, 4/6 Rue du pont, 62000 Paris, France</a></span>	<br>
+							<span>Office Number: </span><span class="subtitle"><a href="+33 5 78 60 82 90">+33 5 78 60 82 90</a></span>	<br>
+							<span>Email: </span><span class="subtitle"><a href="artale_fr@gmail.com">artale_fr@gmail.com</a></span>	<br><br>
+							<span>Canada:<span><br>
+							<span>Address: </span><span class="subtitle"><a href="Art Tal, 831 rue Levy, Montreal, Quebec, Canada">Art Tal, 831 rue Levy, Montreal, Quebec, Canada</a></span>	<br>
+							<span>Office Number: </span><span class="subtitle"><a href="+1 514 348 0083">+1 514 348 0083</a></span>	<br>
+							<span>Email: </span><span class="subtitle"><a href="artale_ca@gmail.com">artale_ca@gmail.com</a></span>	<br><br>
+							<span>Australia:<span><br>
+							<span>Address: </span><span class="subtitle"><a href="Art Tal, 20 Wigley Street, Seacliff, South Australia, Australia">Art Tal, 20 Wigley Street, Seacliff, South Australia, Australia</a></span>	<br>
+							<span>Office Number: </span><span class="subtitle"><a href="+61 (08) 8374 7635">+61 (08) 8374 7635</a></span>	<br>
+							<span>Email: </span><span class="subtitle"><a href="artale_au@gmail.com">artale_au@gmail.com</a></span>	<br><br>
+							</div>
+						</div>
+
+						<!-- Contact Info
+						============================================= -->
+						<div class="w-100">
+
+							<div class="row col-mb-50">
+								<div class="col-sm-8 col-lg-4">
+									<div class="feature-box fbox-center fbox-bg fbox-plain">
+										<div class="fbox-icon">
+											<!--<a href="https://github.com/byuiacm">--><i class="icon-facebook-square"></i></a>
+										</div>
+										<div class="fbox-content">
+											<h3>Facebook <span class="subtitle">Art Tale</span></h3>
+										</div>
+									</div>
+								</div>
+		
+								<div class="col-sm-8 col-lg-4">
+									<div class="feature-box fbox-center fbox-bg fbox-plain">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-instagram"></i></a>
+										</div>
+										<div class="fbox-content">
+											<h3>Instagram<span class="subtitle">#art_tale</span></h3>
+										</div>
+									</div>
+								</div>
+		
+								<div class="col-sm-8 col-lg-4">
+									<div class="feature-box fbox-center fbox-bg fbox-plain">
+										<div class="fbox-icon">
+											<a
+												href="art_tale@gmail.com"><i
+													class="icon-youtube"></i></a>
+										</div>
+										<div class="fbox-content">
+											<h3>Youtube<span class="subtitle">Art Tale Channel</span></h3>
+										</div>
+									</div>
+								</div>
+		
+							</div>
+		
+						</div><!-- Contact Info End -->
+
+					</div>
+				</section>
 
 			</div>
 		</section><!-- #content end -->
 
+		<br>
+
 		<!-- Footer
 		============================================= -->
-		<footer id="footer" class="dark border-0">
+		<footer id="footer" class="dark">
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+				<div class="container">
 
-			<div class="container center">
-				<div class="footer-widgets-wrap">
+					<div class="row col-mb-30">
 
-					<div class="row mx-auto clearfix">
-
-						<div class="col-lg-4">
-
-							<div class="widget clearfix">
-								<h4>Site Links</h4>
-
-								<ul class="list-unstyled footer-site-links mb-0">
-									<li><a href="#" data-scrollto="#wrapper" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Top</a></li>
-									<li><a href="#" data-scrollto="#section-about" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">About</a></li>
-									<li><a href="#" data-scrollto="#section-works" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Works</a></li>
-									<li><a href="#" data-scrollto="#section-services" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Services</a></li>
-									<li><a href="#" data-scrollto="#section-blog" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Blog</a></li>
-									<li><a href="#" data-scrollto="#section-contact" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Contact</a></li>
-								</ul>
-							</div>
-
+						<div class="col-md-7 text-center text-md-left">
+							Copyrights &copy; 2021 All Rights Reserved by Art Tale<br>
 						</div>
 
-						<div class="col-lg-4">
+						<div class="col-md-5 text-center text-md-right">
+							<div class="d-flex justify-content-center justify-content-md-end">
+								<a href="https://byui.zoom.us/j/7106212153" class="social-icon si-small si-borderless si-facebook">
+									<i class="icon-line-video"></i>
+									<i class="icon-line-video"></i>
+								</a>
 
-							<div class="widget subscribe-widget clearfix" data-loader="button">
-								<h4>Subscribe</h4>
+								<a href="#" class="social-icon si-small si-borderless si-twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
 
-								<div class="widget-subscribe-form-result"></div>
-								<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
-									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control form-control-lg not-dark required email" placeholder="Your Email Address">
-									<button class="button button-border button-circle button-light topmargin-sm" type="submit">Subscribe Now</button>
-								</form>
+								<a href="#" class="social-icon si-small si-borderless si-gplus">
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-github">
+									<i class="icon-youtube"></i>
+									<i class="icon-youtube"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-linkedin">
+									<i class="icon-linkedin"></i>
+									<i class="icon-linkedin"></i>
+								</a>
 							</div>
 
-						</div>
-
-						<div class="col-lg-4">
-
-							<div class="widget clearfix">
-								<h4>Contact</h4>
-
-								<p class="lead">795 Folsom Ave, Suite 600<br>San Francisco, CA 94107</p>
-
-								<div class="center topmargin-sm">
-									<a href="#" class="social-icon inline-block border-0 si-small si-facebook" title="Facebook">
-										<i class="icon-facebook"></i>
-										<i class="icon-facebook"></i>
-									</a>
-									<a href="#" class="social-icon inline-block border-0 si-small si-twitter" title="Twitter">
-										<i class="icon-twitter"></i>
-										<i class="icon-twitter"></i>
-									</a>
-									<a href="#" class="social-icon inline-block border-0 si-small si-github" title="Github">
-										<i class="icon-github"></i>
-										<i class="icon-github"></i>
-									</a>
-									<a href="#" class="social-icon inline-block border-0 si-small si-pinterest" title="Pinterest">
-										<i class="icon-pinterest"></i>
-										<i class="icon-pinterest"></i>
-									</a>
-								</div>
-							</div>
-
+							
 						</div>
 
 					</div>
 
 				</div>
-			</div>
-
-			<div id="copyrights">
-				<div class="container center clearfix">
-					Copyrights Canvas 2020 | All Rights Reserved
-				</div>
-			</div>
-
+			</div><!-- #copyrights end -->
 		</footer><!-- #footer end -->
 
 	</div><!-- #wrapper end -->
